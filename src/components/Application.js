@@ -24,7 +24,7 @@ export default function Application(props) {
 
   // HELPER SELECTORS //  
 
-  const appointments = getAppointmentsForDay(state, state.day).map(appointment => {
+  const appointments = getAppointmentsForDay(state, state.day).map(appt => {
 
     const interview = getInterview(state, appt.interview);
 

@@ -36,13 +36,12 @@ export default function Appointment(props) {
 
   function save(name, interviewer) {
 
-    transition(SAVING, true);
-
     const interview = {
       student: name,
       interviewer
     };
 
+    transition(SAVING);
     props.bookInterview(props.id, interview)
     .then(() => {
       transition(SHOW);
@@ -57,7 +56,7 @@ export default function Appointment(props) {
 
 function deleteInterview() {
 
-  transition(DELETE);
+  transition(DELETING);
 
   props.cancelInterview(props.id)
   .then(() => {
@@ -69,11 +68,10 @@ function deleteInterview() {
 
 };
 
-
 // --------------------- //
 
   return (
-    <article className="appointment">
+    <article className="appointment" data-testid="appointment">
       <Header time={props.time} />
         {
       mode === EMPTY && <Empty onAdd={() => transition(CREATE)} />}
@@ -119,13 +117,13 @@ function deleteInterview() {
       {mode === SAVE_ERROR && (
         <Error
         message="Your appointment could not be saved!"
-        onClose={() => transition(EMPTY)}
+        onClose={() => back()}
         />)
       }
       {mode === DELETE_ERROR && (
         <Error
         message="Your appointment could not be deleted!"
-        onClose={() => transition(SHOW)}
+        onClose={() => back()}
         />
         )
       }

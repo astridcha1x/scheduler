@@ -4,13 +4,13 @@ import React from "react";
 
 import PropTypes from 'prop-types';
 
-import InterviewerListItem from "components/InterviewerList.scss";
+import InterviewerListItem from "components/InterviewerListItem";
 
 import "components/InterviewerList.scss";
 
 // -------------------------------- //
 
-function InterviewerList(props) {
+export default function InterviewerList(props) {
 
   const data = props.interviewers.map((interviewer) => {
     return (
@@ -39,4 +39,4 @@ InterviewerList.propTypes = {
 };
 
 // ------ FUNCTION EXPORT ------ //
-export default InterviewerList;
+// export default InterviewerList;

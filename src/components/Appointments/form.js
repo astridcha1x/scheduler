@@ -60,11 +60,11 @@ export default function Form(props) {
             data-testid="student-name-input"
           />
         <section className="appointment__validate">{error}</section>  
-        </form>
         <InterviewerList
           interviewers={props.interviewers}
           value={interviewer}
           onChange={(value) => setInterviewer(value)} />
+        </form>  
       </section>
       <section className="appointment__card-right">
         <section className="appointment__actions">

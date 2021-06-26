@@ -45,14 +45,10 @@ export const getInterviewersForDay = (state, day) => {
   // EMPTY ARRAY FOR BOOKED APPTS //
   const parsedInterviewers = [];
 
-  for (const id of currentInterviewers) {
-
     currentInterviewers.map(id =>
       parsedInterviewers.push(state.interviewers[id])
     )
 
     return parsedInterviewers;
-
-  }
 
 };

@@ -104,26 +104,25 @@ function deleteInterview() {
         />
         )
       }
-      {mode === EDIT &&
-        (transition(CREATE))
-        (<Form 
+      {mode === EDIT &&(
+        <Form 
           name={props.interview.student}
           interviewer={props.interview.interviewer.id}
           interviewers={props.interviewers} 
-          onCancel={back}
+          onCancel={() => back()}
           onSave={save}
         />)
       }
       {mode === SAVE_ERROR && (
         <Error
         message="Your appointment could not be saved!"
-        onClose={() => back()}
+        onClose={back}
         />)
       }
       {mode === DELETE_ERROR && (
         <Error
         message="Your appointment could not be deleted!"
-        onClose={() => back()}
+        onClose={back}
         />
         )
       }

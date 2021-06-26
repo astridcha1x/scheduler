@@ -32,3 +32,9 @@ npm run storybook
 ```
 
 ## Final Product
+
+!["Index Page"](https://github.com/astridcha1x/scheduler/blob/master/docs/Index%20Page.png)
+!["Editing Appointment"](https://github.com/astridcha1x/scheduler/blob/master/docs/Editing%20Appointment.png)
+!["Edit Error Example"](https://github.com/astridcha1x/scheduler/blob/master/docs/Edit%20Error%20Example.png)
+!["Deleting Appointment"](https://github.com/astridcha1x/scheduler/blob/master/docs/Deleting%20Appointment.png)
+!["Fully Booked Day Example"](https://github.com/astridcha1x/scheduler/blob/master/docs/Fully%20Booked%20Day%20Example.png)

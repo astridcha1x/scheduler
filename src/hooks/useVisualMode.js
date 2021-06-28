@@ -1,4 +1,4 @@
-// ------ IMPORT / VARIABLES ------ //
+// -------------------------------- //
 
 import { useState } from "react";
 

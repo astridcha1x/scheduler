@@ -11,6 +11,7 @@ cd to the `scheduler-api` directory in your terminal and run:
 ```
 npm start
 ```
+note that you will need to have also saved the [server repo with the scheduler-api!](https://github.com/astridcha1x/scheduler-api)
 
 in a separate terminal window or tab, cd to `scheduler` (or the name of the project's root directory if you have named it otherwise) and run:
 ```

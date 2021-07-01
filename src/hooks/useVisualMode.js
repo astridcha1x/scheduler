@@ -13,12 +13,8 @@ export default function useVisualMode(initial) {
     const newHistory = [...prev]
 
     if (replace) {
-      // newHistory.pop();
       return [...prev.slice(0, prev.length - 1), newMode];
     }
-    
-    // newHistory.push(newMode);
-    // return newHistory;
 
     return [...prev, newMode];
 
@@ -26,7 +22,6 @@ export default function useVisualMode(initial) {
 
   };
 
-  // go back to previous mode
   const back = () => {
 
     if (history.length < 2) {
@@ -37,7 +32,7 @@ export default function useVisualMode(initial) {
       const newHistory = [...prev];
       newHistory.pop(); 
       return newHistory;
-    }); // can use slice instead, however, was recommended that I keep this for simplicity sake
+    });
 
   };
 

@@ -1,11 +1,8 @@
-// -------------------------------- //
-
 import React from "react";
 import "components/Button.scss";
+const classNames = require("classnames");
 
-const classNames = require("classnames"); // import classmates library
 
-// -------------------------------- //
 
 export default function Button(props) {
   

@@ -1,7 +1,4 @@
-// -------------------------------- //
-
 import React from "react";
-
 import Confirm from "components/Appointments/confirm";
 import Empty from "components/Appointments/empty";
 import Error from "components/Appointments/error";
@@ -9,12 +6,10 @@ import Form from "components/Appointments/form";
 import Header from "components/Appointments/header";
 import Show from "components/Appointments/show";
 import Status from "components/Appointments/status";
-
 import useVisualMode from "../../hooks/useVisualMode";
-
 import "components/Appointments/styles.scss";
 
-// -------------------------------- //
+
 
 export default function Appointment(props) {
 
@@ -32,7 +27,7 @@ export default function Appointment(props) {
     props.interview ? SHOW : EMPTY
   );
 
-  // --------------------- //
+
 
   function save(name, interviewer) {
 
@@ -52,7 +47,7 @@ export default function Appointment(props) {
 
   };
 
-// --------------------- //
+
 
 function deleteInterview() {
 
@@ -68,7 +63,7 @@ function deleteInterview() {
 
 };
 
-// --------------------- //
+
 
   return (
     <article className="appointment" data-testid="appointment">

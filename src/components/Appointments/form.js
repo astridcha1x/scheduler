@@ -1,14 +1,10 @@
-// -------------------------------- //
-
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import Button from "components/Button";
 import InterviewerList from "components/InterviewerList";
-
 import "components/Button.scss";
 import "components/InterviewerList.scss";
 
-// -------------------------------- //
+
 
 export default function Form(props) {
 

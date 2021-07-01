@@ -1,23 +1,15 @@
 export const getAppointmentsForDay = (state, day) => {
 
-  // FIND CURRENT DAY //
+  // FIND CURRENT DAY
   const currentDay = state.days.find(dayObj => day === dayObj.name);
 
-  // GET APPT ID FROM THE DAY //
   const currentAppts = currentDay ? currentDay.appointments : [];
 
-  // EMPTY ARRAY FOR BOOKED APPTS //
-  const parsedAppts = [];
-
-  currentAppts.map(id =>
-    parsedAppts.push(state.appointments[id])
-  )
-
-  return parsedAppts;
+  return currentAppts.map(id => state.appointments[id]);
 
 };
 
-// --------------------- //
+
 
 export const getInterview = (state, interview) => {
 
@@ -28,27 +20,25 @@ export const getInterview = (state, interview) => {
   const interviewerID = interview.interviewer;
   const interviewer = state.interviewers[interviewerID];
 
-  return {...interview, interviewer};
+  return { ...interview, interviewer };
 
 };
 
-// --------------------- //
+
 
 export const getInterviewersForDay = (state, day) => {
 
-  // FIND CURRENT DAY //
+  // FIND CURRENT DAY
   const currentDay = state.days.find(dayObj => day === dayObj.name);
 
-  // GET APPT ID FROM THE DAY //
-  const currentInterviewers = currentDay ? currentDay.interviewers : [];
+  if (state.days.length === 0 || !currentDay) {
+    return [];
+  }
 
-  // EMPTY ARRAY FOR BOOKED APPTS //
-  const parsedInterviewers = [];
+  if (!currentDay.interviewers) {
+    return [];
+  }
 
-    currentInterviewers.map(id =>
-      parsedInterviewers.push(state.interviewers[id])
-    )
-
-    return parsedInterviewers;
+  return currentDay.interviewers.map(id => state.interviewers[id]);
 
 };

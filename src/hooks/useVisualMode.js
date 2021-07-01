@@ -1,8 +1,6 @@
-// -------------------------------- //
-
 import { useState } from "react";
 
-// -------------------------------- //
+
 
 export default function useVisualMode(initial) {
 
@@ -10,12 +8,21 @@ export default function useVisualMode(initial) {
 
   const transition = (newMode, replace) => {
 
-    // react will rationalize the extra setState so no meaningful performance hit
-    if (replace) {
-      back();
-    }
+    setHistory(prev => {
+    
+    const newHistory = [...prev]
 
-    setHistory(prev => ([...history, newMode]));
+    if (replace) {
+      // newHistory.pop();
+      return [...prev.slice(0, prev.length - 1), newMode];
+    }
+    
+    // newHistory.push(newMode);
+    // return newHistory;
+
+    return [...prev, newMode];
+
+    });
 
   };
 
